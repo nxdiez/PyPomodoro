@@ -10,7 +10,6 @@ def obtener_app_activa():
     hwnd = win32gui.GetForegroundWindow()
     if not hwnd:
         return None, None
-
     titulo = win32gui.GetWindowText(hwnd)
     _, pid = win32process.GetWindowThreadProcessId(hwnd)
     try:
